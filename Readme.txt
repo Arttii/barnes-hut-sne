@@ -14,7 +14,15 @@ The code also contains a Matlab wrapper for the C++ code (fast_tsne.m). Please r
 
 COMPILATION
 
-Compilation of the files is relatively straightforward, but requires a working installation of CBLAS. Please refer to the compile_mac and compile_linux shell scripts to see the required compilation command. Note that paths may be different on your machine, so may have to be changed in order for the files to compile.
+Compilation of the files is relatively straightforward, but requires a working installation of CBLAS. 
+
+For Windows get Openblas from [ here](http://example.net/), either compile it or install the prebuild binaries. There's a tutroial [here](http://deeplearning.net/software/theano/install.html#Compiling a faster BLAS) on how to compile it. Copy the download lib and include directories somehwere 
+where you wish OpenBlas to reside in, then change the path in makefile accordingly. After that, assuming you have MinGw installed (Any install should work, even works with the MinGw that is bundled in Anaconda) just cd to the directory and run make. 
+
+Makefile is specific for my installation right now, but should work on Linux/Mac as well if you specify the path. I'll adapt the supplied compilation commands and incorporate them here.
+
+PYTHON WRAPPER
+Right its a bit hackish so it runs, but I will update it to work for all 3 platforms.
 
 
 LEGAL 
