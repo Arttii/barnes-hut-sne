@@ -46,7 +46,7 @@ from sys import stderr, stdin, stdout
 from tempfile import mkdtemp
 
 ### Constants
-BH_TSNE_BIN_PATH = path_join(dirname(__file__), 'bh_tsne')
+BH_TSNE_BIN_PATH = path_join(dirname(__file__), 'bh_tsne.exe')
 assert isfile(BH_TSNE_BIN_PATH), ('Unable to find the bh_tsne binary in the '
     'same directory as this script, have you forgotten to compile it?: {}'
     ).format(BH_TSNE_BIN_PATH)
@@ -102,7 +102,7 @@ def bh_tsne(samples, perplexity=DEFAULT_PERPLEXITY, theta=DEFAULT_THETA,
                 data_file.write(pack('{}d'.format(len(sample)), *sample))
 
         # Call bh_tsne and let it do its thing
-        with open('/dev/null', 'w') as dev_null:
+        with open('NUL', 'w') as dev_null:
             bh_tsne_p = Popen((abspath(BH_TSNE_BIN_PATH), ), cwd=tmp_dir_path,
                     # bh_tsne is very noisy on stdout, tell it to use stderr
                     #   if it is to print any output
