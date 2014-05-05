@@ -16,7 +16,7 @@ COMPILATION
 
 Compilation of the files is relatively straightforward, but requires a working installation of CBLAS. 
 
-For Windows get Openblas from [ here](http://example.net/), either compile it or install the prebuild binaries. There's a tutroial [here](http://deeplearning.net/software/theano/install.html#Compiling a faster BLAS) on how to compile it. Copy the download lib and include directories somehwere 
+For Windows get Openblas from [here][1], either compile it or install the prebuild binaries. There's a tutroial [here][2] on how to compile it. Copy the download lib and include directories somehwere 
 where you wish OpenBlas to reside in, then change the path in makefile accordingly. After that, assuming you have MinGw installed (Any install should work, even works with the MinGw that is bundled in Anaconda) just cd to the directory and run make. 
 
 Makefile is specific for my installation right now, but should work on Linux/Mac as well if you specify the path. I'll adapt the supplied compilation commands and incorporate them here.
@@ -34,3 +34,6 @@ CONTACT
 If you encounter problems with the implementations or have questions about Barnes-Hut-SNE, make sure you read the paper and the online FAQ first! If your question is not answered afterwards, feel free to send me an email at: lvdmaaten@gmail.com
 
  
+
+[2]:http://deeplearning.net/software/theano/install.html
+[1]:http://www.openblas.net
